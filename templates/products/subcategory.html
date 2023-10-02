@@ -1,0 +1,22 @@
+{% extends 'base.html' %}{% load static %}{% block title %}subcategory{% endblock %}{% block content %}
+
+    <table class="table mt-5">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Category</th>
+          <th scope="col">Sub category</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for subcategory in object_list %}
+        <tr>
+          <th scope="row">{{ forloop.counter }}</th>
+          <td>{{ subcategory.category }}</td>
+          <td>{{ subcategory.sub_category }}</td>
+        </tr>
+        {% endfor %}
+
+      </tbody>
+    </table>
+{% endblock content %}
