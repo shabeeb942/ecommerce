@@ -15,4 +15,4 @@ class SubCategoryList(ListView):
 
 class ProductList(ListView):
     model = Product
-    template_name = "products/products.html"
+    template_name = "products/index.html"
