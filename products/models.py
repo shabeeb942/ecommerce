@@ -4,7 +4,7 @@ from django.db import models
 
 class Categories(models.Model):
     category = models.CharField(max_length=120)
-
+    image = models.ImageField(upload_to="categories/")
 
     class Meta:
         verbose_name = 'Category'
@@ -18,6 +18,7 @@ class Categories(models.Model):
 class SubCategories(models.Model):
     category = models.ForeignKey(Categories, on_delete=models.CASCADE)
     sub_category = models.CharField(max_length=120)
+    image = models.ImageField(upload_to="sub_categories/")
 
 
     class Meta:
